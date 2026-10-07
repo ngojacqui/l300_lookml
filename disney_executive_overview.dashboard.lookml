@@ -49,7 +49,7 @@
     - name: total_subscribers
       title: Total Subscribers
       type: single_value
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       measures: [subscribers.count]
       listen:
@@ -63,7 +63,7 @@
     - name: total_viewing_sessions
       title: Total Viewing Sessions
       type: single_value
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       measures: [viewing_sessions.count]
       listen:
@@ -77,7 +77,7 @@
     - name: total_watch_time
       title: Total Watch Time (Minutes)
       type: single_value
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       measures: [viewing_sessions.total_duration_minutes]
       listen:
@@ -91,7 +91,7 @@
     - name: average_watch_time
       title: Avg. Watch Time per Session
       type: single_value
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       measures: [viewing_sessions.average_duration_minutes]
       listen:
@@ -106,7 +106,7 @@
     - name: subscribers_by_tier
       title: Subscribers by Tier
       type: looker_pie
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [subscribers.subscription_tier]
       measures: [subscribers.count]
@@ -123,7 +123,7 @@
     - name: viewers_by_device
       title: Viewing Sessions by Device
       type: looker_pie
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [viewing_sessions.device_type]
       measures: [viewing_sessions.count]
@@ -140,7 +140,7 @@
     - name: top_content
       title: Top 5 Most Watched Content
       type: looker_bar
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [content_catalog.title, content_catalog.brand]
       measures: [viewing_sessions.total_duration_minutes]
@@ -189,7 +189,7 @@
     - name: engagement_over_time
       title: Viewing Engagement over Time
       type: looker_line
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [viewing_sessions.session_start_date]
       measures: [viewing_sessions.total_duration_minutes]
@@ -230,7 +230,7 @@
     - name: brand_performance
       title: Brand Performance Breakdown
       type: looker_column
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [content_catalog.brand]
       measures: [viewing_sessions.count, viewing_sessions.total_duration_minutes]
@@ -289,7 +289,7 @@
     - name: subscribers_by_country
       title: Global Subscribers
       type: looker_geo_choropleth
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [subscribers.country]
       measures: [subscribers.count]
@@ -310,7 +310,7 @@
     - name: subscriber_status
       title: Account Status Breakdown
       type: looker_column
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [subscribers.status]
       measures: [subscribers.count]
@@ -349,7 +349,7 @@
     - name: content_performance_table
       title: Content Catalog Performance
       type: looker_grid
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [content_catalog.title, content_catalog.brand, content_catalog.genre, content_catalog.type]
       measures: [viewing_sessions.count, viewing_sessions.total_duration_minutes]
@@ -391,7 +391,7 @@
       ui_config:
         type: advanced
         display: popover
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       listens_to_filters: []
       field: viewing_sessions.session_start_date
@@ -405,7 +405,7 @@
       ui_config:
         type: tag_list
         display: popover
-      model: disney_streaming
+      model: l300_disney_streaming
       explore: viewing_sessions
       listens_to_filters: []
       field: subscribers.country

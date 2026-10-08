@@ -79,7 +79,7 @@
       type: single_value
       model: l300_disney_streaming
       explore: viewing_sessions
-      measures: [viewing_sessions.total_duration_minutes]
+      measures: [viewing_sessions.total_duration]
       listen:
         Date Filter: viewing_sessions.session_start_date
         Country: subscribers.country
@@ -143,8 +143,8 @@
       model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [content_catalog.title, content_catalog.brand]
-      measures: [viewing_sessions.total_duration_minutes]
-      sorts: [viewing_sessions.total_duration_minutes desc]
+      measures: [viewing_sessions.total_duration]
+      sorts: [viewing_sessions.total_duration desc]
       limit: 5
       x_axis_gridlines: false
       y_axis_gridlines: true
@@ -192,7 +192,7 @@
       model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [viewing_sessions.session_start_date]
-      measures: [viewing_sessions.total_duration_minutes]
+      measures: [viewing_sessions.total_duration]
       sorts: [viewing_sessions.session_start_date]
       x_axis_gridlines: false
       y_axis_gridlines: true
@@ -218,7 +218,7 @@
       show_null_points: true
       interpolation: monotone
       series_colors:
-        viewing_sessions.total_duration_minutes: "#114299"
+        viewing_sessions.total_duration: "#114299"
       listen:
         Date Filter: viewing_sessions.session_start_date
         Country: subscribers.country
@@ -233,8 +233,8 @@
       model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [content_catalog.brand]
-      measures: [viewing_sessions.count, viewing_sessions.total_duration_minutes]
-      sorts: [viewing_sessions.total_duration_minutes desc]
+      measures: [viewing_sessions.count, viewing_sessions.total_duration]
+      sorts: [viewing_sessions.total_duration desc]
       x_axis_gridlines: false
       y_axis_gridlines: true
       show_view_names: false
@@ -264,8 +264,8 @@
       y_axes: [{label: '', orientation: left, series: [{axisId: viewing_sessions.count,
               id: viewing_sessions.count, name: Viewing Sessions}], showLabels: true,
           showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-          type: linear}, {label: !!null '', orientation: right, series: [{axisId: viewing_sessions.total_duration_minutes,
-              id: viewing_sessions.total_duration_minutes, name: Total Duration Minutes}],
+          type: linear}, {label: !!null '', orientation: right, series: [{axisId: viewing_sessions.total_duration,
+              id: viewing_sessions.total_duration, name: Total Duration Minutes}],
           showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
           tickDensityCustom: 5, type: linear}]
       listen:
@@ -352,7 +352,7 @@
       model: l300_disney_streaming
       explore: viewing_sessions
       dimensions: [content_catalog.title, content_catalog.brand, content_catalog.genre, content_catalog.type]
-      measures: [viewing_sessions.count, viewing_sessions.total_duration_minutes]
+      measures: [viewing_sessions.count, viewing_sessions.total_duration]
       sorts: [viewing_sessions.count desc]
       show_view_names: false
       show_row_numbers: true
@@ -372,7 +372,7 @@
       conditional_formatting: [{type: along a scale..., value: !!null '', background_color: !!null '',
           font_color: !!null '', color_application: {collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7,
             palette_id: 85de97da-2ded-4dec-9ceb-36d14c8ca4ee, options: {steps: 5}},
-          bold: false, italic: false, strikethrough: false, fields: [viewing_sessions.total_duration_minutes]}]
+          bold: false, italic: false, strikethrough: false, fields: [viewing_sessions.total_duration]}]
       listen:
         Date Filter: viewing_sessions.session_start_date
         Country: subscribers.country

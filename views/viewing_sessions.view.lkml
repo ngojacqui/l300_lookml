@@ -46,6 +46,7 @@ view: viewing_sessions {
   measure: average_duration {
     type: average
     sql: ${duration_minutes} ;;
+    value_format_name: decimal_2
   }
 
   # L300: Parameters example

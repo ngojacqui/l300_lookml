@@ -49,5 +49,12 @@ view: content_catalog {
     type: yesno
     sql: {% condition genre_filter %} ${genre} {% endcondition %} ;;
   }
+
+  # L300: Measure updating based on templated filter
+  measure: count_by_selected_genre {
+    type: number
+    label: "Count of Content by Selected Genre"
+    sql: COUNT(DISTINCT CASE WHEN {% condition genre_filter %} ${genre} {% endcondition %} THEN ${content_id} ELSE NULL END) ;;
+  }
 }
 

@@ -93,7 +93,7 @@
       type: single_value
       model: l300_disney_streaming
       explore: viewing_sessions
-      measures: [viewing_sessions.average_duration_minutes]
+      measures: [viewing_sessions.average_duration]
       listen:
         Date Filter: viewing_sessions.session_start_date
         Country: subscribers.country

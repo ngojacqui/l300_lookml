@@ -53,7 +53,7 @@ view: content_catalog {
   # L300: Measure updating based on templated filter
   measure: count_by_selected_genre {
     type: number
-    label: "Count of Content by the {{ _filters['content_catalog.genre_filter'] | replace: \"'\", \"\" }} Genre"
+    label: "Count of Content by Selected Genre"
     sql: COUNT(DISTINCT CASE WHEN {% condition genre_filter %} ${genre} {% endcondition %} THEN ${content_id} ELSE NULL END) ;;
   }
 }

@@ -35,7 +35,7 @@ view: content_catalog {
     link: {
       label: "View {{ value }} Content Performance"
       url: "/dashboards/l300_disney_streaming::disney_content_performance?Brand={{ value | url_encode }}&Date+Filter={{ _filters['viewing_sessions.session_start_date'] | url_encode }}"
-      icon_url: "https://emojicdn.elk.sh/%F0%9F%8E%AC"
+      icon_url: "https://www.google.com/s2/favicons?domain=disneyplus.com"
     }
   }
 
